@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+:root{
+    --cor0: white;
+    --cor1: #182256;
+    --cor2: #00FFE6;
+    --cor3: #0ebdbd;
+
+    --font-1: 'Poppins';
+    --font-2: 'Barlow' ;
+}
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+body{
+    background: var(--cor1);
+    color: var(--cor0);
+    display: flex;
+    font-family: var(--font-1);
+    position: relative;
+
+}
+main h1{
+    color: var(--cor2);
+    font-size: 35px;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+main h2{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 100px;
+    width: 480px;
+}
+main form{
+    align-items: center;
+    background: #151d46;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #111;
+    display: flex;
+    flex-direction: column;
+    margin-left: 450px;
+    margin-top: 50px;
+    padding: 0 50px;
+}
+main form span{
+    color: #0ebdbd;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+main form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 300px;
+}
+main form input{
+    border: 0;
+    box-shadow: 0 0 5px var(--cor2);
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+.circuitoE{
+    position: absolute;
+    left: 0px;
+    top: 67vh;
+    width: 400px;
+
+}
+.circuitoD{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 400px;
+
+}
+.cadastrar{
+    background: #00FFE6;
+    border-radius: 10px;
+    color: #151d46;
+    font-family: var(--font-1);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100px;
+}
+.cadastrar:hover{
+    box-shadow: 0 0 5px var(--cor0);
+    height: 45px;
+
+}
