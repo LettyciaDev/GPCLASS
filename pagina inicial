@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+     <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width-device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="mobile.css">
+            <script src="https://kit.fontawesome.com/b18f0bdb91.js" crossorigin="anonymous"></script>
+            <title>GPCLASS</title>
+        </head>   
+        <body>
+            <nav id="navbar">
+                <div id="navbar-container">
+                    <ul class="logo-color">
+                        <div class="yellow"></div>
+                        <div class="green"></div>
+                        <div class="red"></div>
+                    </ul>
+                        <h1 class="logo">GPCLASS</h1>
+                             <button id="btn-mobile">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                             </button>
+
+                    <ul id="navbar-itens">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="curso.html">Cursos</a></li>
+                        <li><a href="gpnews.html">GPNEWS</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <div id="login">
+                            <button><a href="gpclass.html">Alunos</a></button>
+                        </div>
+                        
+                    </ul>
+                </div>
+            </nav>
+           <header id="showcase">
+                <div id="showcase-container">
+                    <h2>Bem vindo ao <span>GPCLASS</span></h2>
+                         <p>todas as informações sobre a ETEGP, além de diversos assuntos que percorrem o mundo, você encontra aqui</p>
+                </div>
+                <div class="circuito">
+                    <img src="circuito.png" alt="circuito">
+                </div>
+                <div class="img-container">         
+                    <img src="robo.png.png" alt="robo"> 
+                    <div class="background"></div> 
+                </div> 
+
+           </header>
+           <section id="info">
+            <div id="info-container">
+                <div class="info1">
+                    <div class="info"><img src="didatico.png" alt=""></div>
+                    <h1>Didático</h1>
+                    <p>Disponibilizando contéudos relacionados a educação, saúde e eixos socioeconomicos</p>
+                </div>
+                <div class="info2">
+                    <div class="info"><img src="interativo.png" alt=""></div>
+                    <h1>Interativo</h1>
+                    <p>Proporciona o compartilhamento do conhecimento cientifico entre estudantes</p>
+                </div><div class="info3">
+                    <div class="info"><img src="atualizado.png" alt="atualizado"></div>
+                    <h1>Atualizado</h1>
+                    <p>Oferecendo informações atuais e verídicas para te manter conectado</p>
+                </div>
+            </div>
+           </section>
+           <section id="curses">
+                <div class="headline">Nossos Cursos</div>
+                    <div id="curses-container">
+                        <div class="DS">
+                            <h1>Desenvolvimento de sistemas</h1>
+                                <img src="DS.png" alt="tecnologia">
+                                  <div class="ds-container">
+                                      <ul class="ds-list">
+                                        <li>Análise de dados</li>
+                                        <li>Desenvolvimento de softwares</li>
+                                        <li>Administração de sistemas computacionais</li>
+                                      </ul>
+                                      <a href="#">saiba mais</a>
+                                  </div>
+                        </div>
+                        <div class="MM">
+                            <h1>Multimídia</h1>
+                            <img src="MM.png" alt="Midias">
+                            <div class="MM-container">
+                                <ul class="MM-list">
+                                  <li>Comunicação Visual</li>
+                                  <li>Edição</li>
+                                  <li>Criação de conteúdo digital</li>
+                                </ul>
+                                <a href="#">saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+           </section>
+           <section id="GPNEWS-container">
+                <div id="headline2">Jornal GPNEWS</div>
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1" checked>
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <div class="slide first">
+                            <img src="https://cdn.spacemoney.com.br/upload/dn_arquivo/2022/09/lula-x-bolsonaro-iv-agencia-brasil-montagem-isto-e-dinheiro-768x432.jpg" alt="politica">
+                        </div>
+                        <div class="slide ">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQulmKWdf4gmRHt_o_YbYWwpJvt0SOR3sLosg&usqp=CAU" alt="politica">
+                        </div>
+                        <div class="slide ">
+                            <img src="https://www12.senado.leg.br/noticias/materias/2023/03/15/plenario-aprova-projeto-que-cria-semana-de-conscientizacao-sobre-a-depressao/mural/manchete?200830" alt="politica">
+                        </div>
+                        <div class="slide ">
+                            <img src="https://www.tse.jus.br/imagens/fotos/foto-antonio-augusto-secom-tse-17-03-2.2023/@@images/53bd7b84-d64f-427e-bb88-787f71e53df0.jpeg" alt="politica">
+                        </div>
+                    </div>
+        
+                    <div class="navegation-bar">
+                        <label class="manual-btn" for="radio1"></label>
+                        <label class="manual-btn" for="radio2"></label>
+                        <label class="manual-btn" for="radio3"></label>
+                        <label class="manual-btn" for="radio4"></label>
+                    </div>
+                </div>
+                <script>
+                    let count = 1;
+                    document.getElementById("radio1").checked = true;
+            
+                    setInterval( function(){
+                        nextImage();
+                    }, 2000 )
+            
+                    function nextImage(){
+                        count++;
+                        if(count>4){
+                            count = 1;
+                        }
+            
+                        document.getElementById("radio" +count).checked = true;
+                    }
+                </script>
+                
+           </section>
+           
+           <section id="about">
+                <div class="sobre">Sobre</div>
+                    <div class="ETE">
+                        <div class="img-ete">
+                            <img src=""srcset="">
+                        </div>
+                        <div class="ete-container">
+                            <h1>ETE GINÁSIO PERNAMBUCANO</h1>
+                             <p>É uma tradicional instituição de ensino médio da cidade do Recife.
+                             Fundado em 1825, é o mais antigo colégio do país em atividade.</p>
+                             <a href="#">Saiba mais</a>
+                        </div>
+                    </div>
+          </section>
+          <div id="feedbacks">
+                <div class="headline">Nossos Feras</div>
+                    <div class="feras-container">
+                      
+                </div>
+          </div>
+         <footer id="footer">
+          <div class="footer-container">
+             <div class="company">
+                <h3>Contribuidores</h3>
+                <ul>
+                    <li>ETE GINÁSIO PERNAMBUCANO</li>
+                    <li>SECRETÁRIA DA EDUCAÇÃO</li>
+                    <li>ALUNOS DE SISTEMAS</li>
+                </ul>    
+             </div>
+             <div class="suport">
+                <h3>Conteúdos</h3>
+                <ul>
+                    <li>Nossos Cursos</li>
+                    <li>GPNEWS</li>
+                    <li>Sobre</li>
+                    <li>Nossos Feras</li>
+                </ul>    
+             </div>
+             <div class="socialmedia">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                </ul>
+            
+             </div>
+            <p>copyright 2023 - todos os direitos reservados</p>
+        </div>
+         </footer>
+               <script src="./btn.js"></script>       
+        </body>
+    </html>
