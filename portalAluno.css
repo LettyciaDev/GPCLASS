@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu-card:nth-child(1){
+    background: #00FFE6;
+}
+.home{
+    color: #0e1435;
+}
+
+#information{
+    display: flex;
+    padding-top: 130px;
+    padding-bottom: 100px;
+}
+#information h2{
+    color: #182256;
+    display: flex;
+    font-family:var(--font-container2) ;
+    font-size: 15px;
+    justify-content: center;
+    padding-top: 20px;
+}
+/*
+#info-container{
+    background: #fff;
+    box-shadow: 0 0 10px #111;
+    border-radius: 10px ;
+    margin-left: 20px;
+    position: relative;
+    width: 180px;
+}
+
+.agenda{
+    border: 1px solid #999 ;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 162px;
+}
+#input-box{
+    border: none;
+    font-size: 10px;
+    margin-left: 4px;
+    width: 106px;
+}
+.add{
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background: #182256;
+    font-size: 10px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 50px;
+}
+#event-list{
+    font-size: 14px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 180px;
+}
+ul li{
+    cursor: pointer;
+    list-style: none;
+    margin-left: 30px;
+    padding: 12px 8px 12px 10px;
+    user-select: none;
+}
+ul li::before{
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 1px solid #444;
+    content: '';
+    height: 15px;
+    list-style: none;
+    left: 2px;
+    position: absolute;
+    width: 15px;
+
+}
+ul li.checked{
+    color: #0e1435;
+    margin-left: 25px;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+    background-color: #0e1435;
+    left: 2px;
+}
+#event-list li span{
+    border-radius: 50%;
+    font-family: 'Quicksand';
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 153px;
+    width: 40px;
+}
+#event-list li span:hover{
+    background: #0e1435 ;
+    color: #fff;
+}
+*/
+#info-container{
+    background: #fff;
+    box-shadow: 0 0 10px #111;
+    border-radius: 10px;
+    color: #182256;
+    font-family: var(--font-p);
+    margin-left: 30px;
+    margin-top: 70px;
+    position: relative;
+    width: 180px;
+
+}
+.headline h2{
+    font-size: 15px;
+}
+.agenda{
+    align-items: center;
+    background: #f0efef;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 135px;
+    
+}
+#input-box{
+    background: transparent;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    font-size: 10px;
+    outline: none;
+    width: 120px;
+}
+.add{
+    background: #182256;
+    border: none;
+    border-radius: 40px;
+    color: var(--cor0);
+    cursor: pointer;
+    font-family: var(--font-p);
+    font-size: 10px;
+    padding: 4px;
+}
+ul li::before{
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 1px solid #444;
+    content: '';
+    height: 15px;
+    list-style: none;
+    left: 2px;
+    margin-left: 10px;
+    margin-right: 4px;
+    position: absolute;
+    width: 15px;
+
+}
+ul li.checked{
+    color: #0e1435;
+    margin-left: 25px;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+    background-color: #0e1435;
+    left: 2px;
+}
+#event-list li{
+    cursor: pointer;
+    font-size: 13px;
+    list-style: none;
+    padding: 8px 4px 8px 8px;
+    user-select: none;
+}
+#event-list li span{
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    font-size: 18px ;
+    line-height: 40px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+#event-list li span:hover{
+   color: #444;
+}
+
+#hrAulas{
+    left: 18%;
+    position: absolute;
+    top: 65%;
+}
+.header-title{
+    margin-left: 20px;
+}
+#gpnews{
+    background: #0e1435;
+    margin-top: 240px;
+}
+#gpnews h1{
+    border-bottom: solid 2px var(--cor1);
+    color: var(--cor0);
+    font-family: var(--font-container2);
+    font-size: 35px;
+    margin-left: 80px;
+    padding-top: 30px;
+    width: 700px;
+}
+
+.swiper{
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 1000px;
+}
+.swiper-slide{
+    margin-right: 1;
+}
+.swiper-slide iframe{
+    box-shadow: 0 0 10px #111;
+    border-radius: 10px;
+    height: 460px;
+    width: 300px;
+    
+}
+.seeMore a{
+    color: #F6F6F9;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
