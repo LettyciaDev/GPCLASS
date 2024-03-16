@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.menu-card:nth-child(5){
+    background: #00FFE6;
+}
+.exer{
+    color: #0e1435;
+}
+#simulado-title{
+    color: #182256;
+    font-size: 25px;
+    font-family: var(--font-welcome);
+    margin-left: 15%;
+    padding: 100px 100px;
+}
+#simulado-title p{
+    display: flex;
+    font-size: 17px;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 10px;
+    width: 700px;
+}
+#simulado-type{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.test-button{
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    width: 600px;
+}
+.test-button:hover{
+    transition: 0.2s;
+    height: 130px;
+    width: 610px;
+}
+.test-button button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 40px;
+    font-family: "Poppins";
+    text-shadow: 0 5px 5px #222;
+    width: 600px;
+
+}
+.test-button button:hover{
+    text-shadow: 0 8px 8px #222;
+}
+
+.test-button:nth-child(1){
+    background: #5E17EB;
+    box-shadow: 0 10px 0 #481f9b;
+}
+.test-button:nth-child(2){
+    background: #00FFE6;
+    box-shadow: 0 10px 0 #16ac9d;
+}
+.test-button:nth-child(3){
+    background: #FFD300;
+    box-shadow: 0 10px 0 #a68b03;
+}
+.selecArea{
+    color: #182256;
+    display: flex; 
+    font-family: var(--font-container);
+    font-size: 10px;
+    margin-top: 40px; 
+    margin-left: 500px; 
+}
+.Humanas{
+    background: var(--cor0);
+    border-radius: 3px;
+    margin-right: 60px;
+    padding: 5px;
+}
+.Exatas{
+    background: var(--cor0);
+    border-radius: 3px;
+    margin-right: 50px;
+    padding: 5px;
+}
+.conteudos h1{
+    border-bottom: solid 2px #182256;
+    color: #182256;
+    font-family: var(--font-container);
+    font-size: 35px;
+    margin-left: 50px;
+    width: 800px;
+}
+#simulado{
+    display: none;
+    background: #fff;
+    box-shadow: 0 0 5px #111;
+    border-radius: 5px;
+    margin-left: 15%;
+    width: 900px;
+}
+#simulado h1{
+    color: #182256;
+    font-family: var(--font-container);
+    border-bottom: 2px solid;
+    margin-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#question{
+    color: #182256;
+    display: flex;
+    font-family: var(--font-container);
+    font-size: 18px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    width: 600px;
+}
+#answer-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
+.btn{
+    border: 1px solid #182256;
+    border-radius: 4px;
+    color: #182256;
+    cursor: pointer;
+    font-family: var(--font-welcome);
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 600px;   
+}
+.btn:hover:not([disabled]){
+    background: #9292ff;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    border: none;
+    border-radius: 4px;
+    background: var(--cor1);
+    color: var(--cor0);
+    cursor: pointer;
+    font-family: var(--font-welcome);
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: 550px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
