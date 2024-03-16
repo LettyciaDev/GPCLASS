@@ -1,0 +1,253 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quest.css">
+    <link rel="stylesheet" href="estrutura.css">
+    <script src="https://kit.fontawesome.com/b18f0bdb91.js" crossorigin="anonymous"></script>
+     <script src="quest.js"></script>   
+    <title>Document</title>
+</head>
+<body>
+       <nav id="navbar">
+            <div class="navbar-container">
+                 <div id="user"><i class="user fa-solid fa-user"></i></div>
+                    <div id="welcome">
+                        <h2>Bem vind@,<div id="name-user">usuário!</div></h2>
+                            <div class="welcome-description"></div>
+                              <div id="email"><h3>Email:</h3><p>usuario@aluno.educacao.gov.pe.br</p></div>
+                              <div id="turma"><h3>Turma:</h3><p> #° ano</p></div>
+                            </div>
+                    </div>
+                    <div class="img1"><img src="circuitoE.png" alt="circuitoE"></div>
+                    <div class="img2"><img src="circuitoD.png" alt="circuitoD"></div>
+            </div>
+       </nav>
+       <div id="menu">
+        <div class="menu-container">
+            <div id="menu-item">
+                 <div class="menu-card" >
+                    <a href="gpclass.html">
+                        <i class="icon fa-solid fa-house"></i>
+                          <p>HOME</p>
+                    </a>
+                 </div>
+                    <div class="menu-card">     
+                      <a href="gpnews.html">             
+                      <i class="icon fa-solid fa-newspaper"></i>
+                          <p class="gpnews">GPNEWS</p> 
+                    </a>
+                 </div>
+                <div class="menu-card">
+                  <a href="atv.html">
+                   <i class="icon fa-solid fa-check"></i>
+                   <p class="atv">MATÉRIAS</p>
+                 </a>
+                </div>
+             <div class="menu-card">
+                <a href="calendar.html">
+                  <i class="icon fa-regular fa-calendar"></i>
+                    <p class="calend">CALENDÁRIO</p>
+                </a>
+             </div>
+             <div class="menu-card">
+                <a href="quest.html">
+                  <i class="exer icon fa-solid fa-dumbbell"></i>
+                    <p class="exer">EXERCÍCIOS</p>
+                </a>
+            </div>
+          </div>
+       </div>
+     </div>
+        <section id="container">
+        <div id="simulado-title">
+            <div class="headline"><h1>Simulados</h1></div>
+             <p>Aqui estão disponivéis simulados de vestibulares e de todos exames do enem para te ajudarem a mandar bem na hora da seleção</p>
+        </div>
+        <div id="simulado-type">
+                <div id="SAEPE" class="test-button">
+                  <button>SAEPE/SAEB</button>
+                </div>
+                <div id="ENEM" class="test-button">
+                  <button onclick="exibirENEM()">ENEM</button>
+                </div>
+                <div id="VESTIBULARES" class="test-button">
+                  <button>VESTIBULARES</button>
+                </div>
+        </div>     
+              
+                <div id="simulado">
+                     <h1>ENEM</h1>
+                       <div class="selecArea">
+                          <div class="Humanas"><h2>Prova de Humanas</h2></div>
+                          <div class="Exatas"><h2>Prova de Exatas</h2></div>
+                     </div>
+                       <div class="quiz">
+                         <h2 id="question">question goes here</h2>
+                            <div id="answer-buttons">
+                                <button class="btn">Answer 1</button>
+                                <button class="btn">Answer 2</button>
+                                <button class="btn">Answer 3</button>
+                                <button class="btn">Answer 4</button>
+                                <button class="btn">Answer 5</button>
+                            </div>
+                            <button id="next-btn">Next</button>
+                        </div>
+
+                   
+                  </div>    
+                  <script>
+                    const question = [
+    {
+      question:"O Surrealismo configurou-se como uma das vanguardas artísticas europeias do início do século XX. René Magritte, pintor belga, apresenta elementos dessa vanguarda em suas produções. Um traço do Surrealismo presente nessa pintura é o(a):",
+         answers: [
+             {text: "justaposição de elementos díspares, observada na imagem do homem no espelho.", correct: true},
+             {text:"crítica ao passadismo, exposta na dupla imagem do homem olhando sempre para frente.", correct: false},
+             { text:"construção de perspectiva, apresentada na sobreposição de planos visuais." , correct: false},
+             { text:"processo de automatismo, indicado na repetição da imagem do homem." , correct: false} ,
+             { text:"procedimento de colagem, identificado no reflexo do livro no espelho.", correct: false }
+            ]
+    },
+    {
+      question:"Tendo em vista as regras de concordância, assinale a opção em que a forma verbal está errada:",
+         answers:[
+             { text: "Existem na atualidade diferentes tipos de inseticidas prejudiciais à saúde do homem." , correct: false},
+             {text: "Possuem elevado grau de toxidade os defensivos do tipo fosforado.", correct: false},
+             { text:" Podem provocar sérias lesões hepáticas, os defensivos agrícolas à base de DDT.", correct: false},
+             { text:"Faltam aos países subdesenvolvidos uma legislação mais rigorosa sobre os agrotóxicos." , correct: true} ,
+             { text:"Persistem por muito tempo no meio ambiente os efeitos nocivos dos inseticidas clorados.", correct: false }
+            ]
+    },
+    {
+      question:"O Surrealismo configurou-se como uma das vanguardas artísticas europeias do início do século XX. René Magritte, pintor belga, apresenta elementos dessa vanguarda em suas produções. Um traço do Surrealismo presente nessa pintura é o(a):",
+         answers:[
+             { text: "justaposição de elementos díspares, observada na imagem do homem no espelho.", correct: true},
+             {text:"crítica ao passadismo, exposta na dupla imagem do homem olhando sempre para frente.", correct: false},
+             { text:"construção de perspectiva, apresentada na sobreposição de planos visuais." , correct: false},
+             { text:"processo de automatismo, indicado na repetição da imagem do homem." , correct: false} ,
+             { text:"procedimento de colagem, identificado no reflexo do livro no espelho.", correct: false }
+            ]
+    },
+    {
+      question:"O Surrealismo configurou-se como uma das vanguardas artísticas europeias do início do século XX. René Magritte, pintor belga, apresenta elementos dessa vanguarda em suas produções. Um traço do Surrealismo presente nessa pintura é o(a):",
+         answers:[
+             { text: "justaposição de elementos díspares, observada na imagem do homem no espelho.", correct: true},
+             {text:"crítica ao passadismo, exposta na dupla imagem do homem olhando sempre para frente.", correct: false},
+             { text:"construção de perspectiva, apresentada na sobreposição de planos visuais." , correct: false},
+             { text:"processo de automatismo, indicado na repetição da imagem do homem." , correct: false} ,
+             { text:"procedimento de colagem, identificado no reflexo do livro no espelho.", correct: false }
+            ]
+    },{
+      question:"O Surrealismo configurou-se como uma das vanguardas artísticas europeias do início do século XX. René Magritte, pintor belga, apresenta elementos dessa vanguarda em suas produções. Um traço do Surrealismo presente nessa pintura é o(a):",
+         answers:[
+             { text: "justaposição de elementos díspares, observada na imagem do homem no espelho.", correct: true},
+             {text:"crítica ao passadismo, exposta na dupla imagem do homem olhando sempre para frente.", correct: false},
+             { text:"construção de perspectiva, apresentada na sobreposição de planos visuais." , correct: false},
+             { text:"processo de automatismo, indicado na repetição da imagem do homem." , correct: false} ,
+             { text:"procedimento de colagem, identificado no reflexo do livro no espelho.", correct: false }
+            ]
+    }
+    
+];
+
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+currentQuestionIndex = 0;
+score = 0;
+nextButton.innerHTML = "Next";
+showQuestion();
+} 
+
+function showQuestion(){
+resetState();
+let currentQuestion = question[currentQuestionIndex]
+let questionNo = currentQuestionIndex + 1;
+questionElement.innerHTML = questionNo + ". " + currentQuestion.
+question;
+
+currentQuestion.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButtons.appendChild(button);
+    if(answer.correct){
+        button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+});
+}
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+function selectAnswer(e){
+const selectedBtn = e.target;
+const isCorrect = selectedBtn.dataset.correct === "true";
+if(isCorrect){
+    selectedBtn.classList.add("correct");
+    score++;
+}else{
+    selectedBtn.classList.add("incorrect");
+}
+Array.from(answerButtons.children).forEach(button => {
+    if(button.dataset.correct === "true"){
+         button.classList.add("correct");
+    }
+    button.disabled = true;
+});
+nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `Você teve ${score} acerto(s) de ${question.length}!`;
+    nextButton.innerHTML = "Ir outra vez";
+    nextButton.style.display = "Block";
+}
+
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < question.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < question.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
+
+
+startQuiz();
+
+function exibirENEM(){
+ document.getElementById(simulado);
+ simulado.style.display = 'block';
+
+if( simulado.style.display = 'block'){
+  const tipoSimulado = document.getElementById('simulado-type');
+    tipoSimulado.style.display = 'none';
+
+}
+}
+                  
+</script>
+</body>
+</html>
