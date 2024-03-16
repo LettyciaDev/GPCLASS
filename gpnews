@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gpnews.css">
+    <script src="https://kit.fontawesome.com/b18f0bdb91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <title>GPNEWS</title>
+</head>
+<body>
+        <div id="navbar">
+            <div class="navbar-content">
+                <ul class="logo-color">
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                    <div class="red"></div>
+                </ul>
+                    <h1 class="logo">GPCLASS</h1>
+                <div class="GPNEWS"><h1>GPNEWS</h1></div>
+                <div class="look"></div>
+            </div>
+        </div>
+    <section class="destaques">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" checked>
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <a href="Untitled-1.html">
+                    <img src="https://cdn.spacemoney.com.br/upload/dn_arquivo/2022/09/lula-x-bolsonaro-iv-agencia-brasil-montagem-isto-e-dinheiro-768x432.jpg" alt="politica">
+                   </a>
+                </div>
+                <div class="slide ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQulmKWdf4gmRHt_o_YbYWwpJvt0SOR3sLosg&usqp=CAU" alt="politica">
+                </div>
+                <div class="slide ">
+                    <img src="https://www12.senado.leg.br/noticias/materias/2023/03/15/plenario-aprova-projeto-que-cria-semana-de-conscientizacao-sobre-a-depressao/mural/manchete?200830" alt="politica">
+                </div>
+                <div class="slide ">
+                    <img src="https://www.tse.jus.br/imagens/fotos/foto-antonio-augusto-secom-tse-17-03-2.2023/@@images/53bd7b84-d64f-427e-bb88-787f71e53df0.jpeg" alt="politica">
+                </div>
+              
+            </div>
+            <div class="navegation-bar">
+                <label class="manual-btn" for="radio1"></label>
+                <label class="manual-btn" for="radio2"></label>
+                <label class="manual-btn" for="radio3"></label>
+                <label class="manual-btn" for="radio4"></label>
+            </div>
+        </div>
+    </section>
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+
+        setInterval( function(){
+            nextImage();
+        }, 2000 )
+
+        function nextImage(){
+            count++;
+            if(count>4){
+                count = 1;
+            }
+
+            document.getElementById("radio" +count).checked = true;
+        }
+    </script>
+    <section class="categoria">
+         <div class="categoria-container">
+            <div class="categoria-card educacao"><h1>Educação</h1></div>
+            <div class="categoria-card saude"><h1>Saúde</h1></div>
+            <div class="categoria-card politica"><h1>Política</h1></div>
+            <div class="categoria-card economia"><h1>Economia</h1></div>
+            <div class="categoria-card esportes"><h1>Esportes</h1></div>
+            <div class="categoria-card mundo"><h1>Mundo</h1></div>
+         </div>
+    </section>
+    <section class="ult-noticias">
+        <div class="headline"><h1>Últimas Notícias</h1></div>
+            <div class="ult-noticias-container">
+                <div class="card-sideL">
+                <div class="noticia-card">
+                    <img class="noticia-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                         <div class="noticia-description">
+                             <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                        </div>
+                </div>
+                <div class="noticia-card">
+                    <img class="noticia-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                         <div class="noticia-description">
+                             <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                        </div>
+                </div>
+              </div>
+                <div class="card-sideR">
+                <div class="noticia-card">
+                    <img class="noticia-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                         <div class="noticia-description">
+                             <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                        </div>
+                </div>
+                <div class="noticia-card">
+                    <img class="noticia-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                         <div class="noticia-description">
+                             <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="music-playlist">
+            <div class="headline"><h2>RadioGP - Playlist</h2></div>
+             <div class="box-music">
+                <input type="text" id="input-box" placeholder="adicione uma música">
+                <button onclick="addMusic()" class="add">Adicionar</button>
+             </div>
+             <ul id="music-list">
+                <!--<li class="checked"></li>
+                <li></li>
+                <li></li>
+                <li></li> -->
+             </ul>
+             <script>
+                const inputBox = document.getElementById("input-box")
+                const musicList = document.getElementById("music-list")
+
+                function addMusic(){
+                    if(inputBox.value === ''){
+                        alert("Adicione uma música!")
+                    }
+                    else{
+                        let li = document.createElement("li");
+                        li.innerHTML = inputBox.value;
+                        musicList.appendChild(li);
+                        let span = document.createElement("span");
+                        span.innerHTML = "x";
+                        li.appendChild(span);
+
+                    }
+                    inputBox.value = "";
+                    saveData();
+                }
+
+                musicList.addEventListener("click", function(e){
+                    if(e.target.tagName === "LI"){
+                        e.target.classList.toggle("checked");
+                        saveData();
+                    }
+                    else if(e.target.tagName === "SPAN"){
+                        e.target.parentElement.remove();
+                        saveData();
+                    }
+                }, false);
+
+                function saveData(){
+                    localStorage.setItem("data", musicList.innerHTML );
+                }
+                function showTask(){
+                    musicList.innerHTML = localStorage.getItem("data");
+                }
+                showTask()
+             </script>
+        </div>
+        <section class="Storie">
+            <div class="headline"><h1>Videos Curtos</h1></div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE"
+                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="swiper-slide"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            
+              <!-- Swiper JS -->
+              <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                });
+              </script>
+               </section>
+               <section class="educa-noticias">
+                <div class="headline-educa"><h1>Educação</h1></div>
+                    <div class="educa-noticias-container">
+                        <div class="noticia-card-educa">
+                            <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                 <div class="noticia-categoria-description">
+                                     <h1>Lorem, ipsum dolor.</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                </div>
+                        </div>
+                        <div class="noticia-card-educa">
+                            <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                 <div class="noticia-categoria-description">
+                                     <h1>Lorem, ipsum dolor.</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                </div>
+                        </div>
+                        <div class="noticia-card-educa">
+                            <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                 <div class="noticia-categoria-description">
+                                     <h1>Lorem, ipsum dolor.</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                </div>
+                        </div>
+                        <div class="noticia-card-educa">
+                            <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                 <div class="noticia-categoria-description">
+                                     <h1>Lorem, ipsum dolor.</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="economia-noticias">
+                    <div class="headline-economia"><h1>Economia</h1></div>
+                        <div class="economia-noticias-container">
+                            <div class="noticia-card-economia">
+                                <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                     <div class="noticia-categoria-description">
+                                         <h1>Lorem, ipsum dolor.</h1>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                    </div>
+                            </div>
+                            <div class="noticia-card-economia">
+                                <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                     <div class="noticia-categoria-description">
+                                         <h1>Lorem, ipsum dolor.</h1>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                    </div>
+                            </div>
+                            <div class="noticia-card-economia">
+                                <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                     <div class="noticia-categoria-description">
+                                         <h1>Lorem, ipsum dolor.</h1>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                    </div>
+                            </div>
+                            <div class="noticia-card-economia">
+                                <img class="noticia-categoria-img" src="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png" alt="tecnologia">
+                                     <div class="noticia-categoria-description">
+                                         <h1>Lorem, ipsum dolor.</h1>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, voluptatibus!</p>
+                                    </div>
+                            </div>
+                     </div>
+                </section>
+           
+</body>
+</html>
