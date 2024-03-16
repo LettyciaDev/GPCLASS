@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gpclass.css">
+    <script src="https://kit.fontawesome.com/b18f0bdb91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="aulas.css">
+    <link rel="stylesheet" href="estrutura.css">
+    <title>GPCLASS</title>
+</head>
+<body>
+       <nav id="navbar">
+            <div class="navbar-container">
+              <div id="setting">
+                <i class="setting fa-solid fa-gear"></i>
+              </div>
+                 <div id="user"><i class="user fa-solid fa-user"></i></div>
+                    <div id="welcome">
+                        <h2>Bem vind@,<div id="name-user">usuário!</div></h2>
+                            <div class="welcome-description"></div>
+                              <div id="email"><h3>Email:</h3><p>usuario@aluno.educacao.gov.pe.br</p></div>
+                              <div id="turma"><h3>Turma:</h3><p> #° ano</p></div>
+                            </div>
+                    </div>
+                    <div class="img1"><img src="circuitoE.png" alt="circuitoE"></div>
+                    <div class="img2"><img src="circuitoD.png" alt="circuitoD"></div>
+            </div>
+       </nav>
+       <div id="menu">
+          <div class="menu-container">
+              <div id="menu-item">
+                   <div class="menu-card" >
+                      <a href="#">
+                          <i class="home icon fa-solid fa-house"></i>
+                            <p class="home">HOME</p>
+                      </a>
+                   </div>
+                      <div class="menu-card">     
+                        <a href="gpnews.html">             
+                        <i class="icon fa-solid fa-newspaper"></i>
+                            <p class="gpnews">GPNEWS</p> 
+                      </a>
+                   </div>
+                  <div class="menu-card">
+                    <a href="atv.html">
+                     <i class="icon fa-solid fa-check"></i>
+                     <p class="atv">MATÉRIAS</p>
+                   </a>
+                  </div>
+               <div class="menu-card">
+                  <a href="calendar.html">
+                    <i class="icon fa-regular fa-calendar"></i>
+                      <p class="calend">CALENDÁRIO</p>
+                  </a>
+               </div>
+               <div class="menu-card">
+                  <a href="quest.html">
+                    <i class="icon fa-solid fa-dumbbell"></i>
+                      <p class="exer">EXERCÍCIOS</p>
+                  </a>
+              </div>
+            </div>
+         </div>
+       </div>
+      <section id="container">
+       <section id="information">  
+           <div id="info-container">
+             <h2>Informações</h2>
+                  <div class="agenda">
+                     <input type="text" id="input-box" placeholder="adicione um evento">
+                     <button onclick="addEvent()" class="add">OK</button>
+                   </div>
+                       <ul id="event-list">
+                        <!-- <li class="checked">atv de portugues</li>
+                         <li></li>
+                         <li></li>-->
+                       </ul>
+                   </div>
+                  <script>
+                     const inputBox = document.getElementById("input-box")
+                     const eventList = document.getElementById("event-list")
+     
+                     function addEvent(){
+                         if(inputBox.value === ''){
+                             alert("Adicione um evento!")
+                         }
+                         else{
+                             let li = document.createElement("li");
+                             li.innerHTML = inputBox.value;
+                             eventList.appendChild(li);
+                             let span = document.createElement("span");
+                             span.innerHTML = "x";
+                             li.appendChild(span);
+     
+                         }
+                         inputBox.value = "";
+                         saveData();
+                     }
+     
+                     eventList.addEventListener("click", function(e){
+                         if(e.target.tagName === "LI"){
+                             e.target.classList.toggle("checked");
+                             saveData();
+                         }
+                         else if(e.target.tagName === "SPAN"){
+                             e.target.parentElement.remove();
+                             saveData();
+                         }
+                     }, false);
+     
+                     function saveData(){
+                         localStorage.setItem("dataE", eventList.innerHTML );
+                     }
+                     function showTask(){
+                         eventList.innerHTML = localStorage.getItem("dataE");
+                     }
+                     showTask()
+                  </script>
+             </div>    
+           </div>                                                                                     
+       </section>
+       <section id="hrAulas">
+       <div class="header">
+        <h1 class="header-title">Cronograma de Estudos</h1>
+       </div>
+     <div class="main">
+        <button type="button" class="button purple mobile" id="addAula">Adicionar Aula</button>
+        <table id="tableAula" class="records">
+            <thead>
+                <tr>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Horário de Aulas</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="segunda" data-index="new" class="modal-field" placeholder="matéria-segunda" required>
+                    <input type="text" id="terça" class="modal-field" placeholder="matéria-terça" required>
+                    <input type="text" id="quarta" class="modal-field" placeholder="matéria-quarta" required>
+                    <input type="text" id="quinta" class="modal-field" placeholder="matéria-quinta" required>
+                    <input type="text" id="sexta" class="modal-field" placeholder="matéria-sexta" required>
+                </form>
+                <div class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button purple">Cancelar</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+          <script>
+          
+
+const openModal = () => document.getElementById('modal')
+    .classList.add('active')
+
+const closeModal = () => {
+    clearFields()
+    document.getElementById('modal').classList.remove('active')
+}
+
+
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_aula')) ?? []
+const setLocalStorage = (dbAula) => localStorage.setItem("db_aula", JSON.stringify(dbAula))
+
+// CRUD - create read update delete
+const deleteAula= (index) => {
+    const dbAula= readAula()
+    dbAula.splice(index, 1)
+    setLocalStorage(dbAula)
+}
+
+const updateAula = (index, aula) => {
+    const dbAula = readAula()
+    dbAula[index] = aula
+    setLocalStorage(dbAula)
+}
+
+const readAula = () => getLocalStorage()
+
+const createAula = (aula) => {
+    const dbAula = getLocalStorage()
+    dbAula.push (aula)
+    setLocalStorage(dbAula)
+}
+
+const isValidFields = () => {
+    return document.getElementById('form').reportValidity()
+}
+
+//Interação com o layout
+
+const clearFields = () => {
+    const fields = document.querySelectorAll('.modal-field')
+    fields.forEach(field => field.value = "")
+    document.getElementById('segunda').dataset.index = 'new'
+    document.querySelector(".modal-header>h2").textContent  = 'Adicionar aula'
+}
+
+const saveAula = () => {
+    if (isValidFields()) {
+        const aula = {
+            segunda: document.getElementById('segunda').value,
+            terça: document.getElementById('terça').value,
+            quarta: document.getElementById('quarta').value,
+            quinta: document.getElementById('quinta').value,
+            sexta: document.getElementById('sexta').value
+        }
+        const index = document.getElementById('segunda').dataset.index
+        if (index == 'new') {
+            createAula(aula)
+            updateTable()
+            closeModal()
+        } else {
+            updateAula(index, aula)
+            updateTable()
+            closeModal()
+        }
+    }
+}
+
+const createRow = (aula, index) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+        <td>${aula.segunda}</td>
+        <td>${aula.terça}</td>
+        <td>${aula.quarta}</td>
+        <td>${aula.quinta}</td>
+        <td>${aula.sexta}</td>
+        <td>
+            <button type="button" class="button-edit-exclu" id="edit-${index}"><i class="edit fa-solid fa-pen"></i></button>
+            <button type="button" class="button-edit-exclu" id="delete-${index}" ><i class="excluir fa-solid fa-trash"></i></button>
+        </td>
+    `
+    document.querySelector('#tableAula>tbody').appendChild(newRow)
+}
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#tableAula>tbody tr')
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+
+const updateTable = () => {
+    const dbAula = readAula()
+    clearTable()
+    dbAula.forEach(createRow)
+}
+
+const fillFields = (aula) => {
+    document.getElementById('segunda').value = aula.segunda
+    document.getElementById('terça').value = aula.terça
+    document.getElementById('quarta').value = aula.quarta
+    document.getElementById('quinta').value = aula.quinta
+    document.getElementById('sexta').value = aula.sexta
+    document.getElementById('segunda').dataset.index = aula.segunda
+}
+
+const editAula = (index) => {
+    const aula = readAula()[index]
+    aula.index = index
+    fillFields(aula)
+    document.querySelector(".modal-header>h2").textContent  = `Editando ${aula.segunda}`
+    openModal()
+}
+
+const editDelete = (event) => {
+    if (event.target.type == 'button') {
+
+        const [action, index] = event.target.id.split('-')
+
+        if (action == 'edit') {
+            editAula(index)
+        } else {
+            const aula = readAula()[index]
+            const response = confirm(`Deseja realmente excluir a(s) aula(s) ${aula.segunda}`)
+            if (response) {
+                deleteAula(index)
+                updateTable()
+            }
+        }
+    }
+}
+
+updateTable()
+
+// Eventos
+document.getElementById('addAula')
+    .addEventListener('click', openModal)
+
+document.getElementById('modalClose')
+    .addEventListener('click', closeModal)
+
+document.getElementById('salvar')
+    .addEventListener('click', saveAula)
+
+document.querySelector('#tableAula>tbody')
+    .addEventListener('click', editDelete)
+
+document.getElementById('cancelar')
+    .addEventListener('click', closeModal)
+
+          </script>
+          <!--ESTRUTURA DO GPNEWS-->
+     <section id="gpnews">
+      <h1>GPNEWS</h1>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE"
+               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/h5WjNMGztvE" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        </script>
+        <div class="seeMore">
+          <a href="gpnews.html">ver mais</a>
+        </div>
+      </section>
+    </section>
+</body>
+</html>
